@@ -1,0 +1,237 @@
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf3;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: white;
+    box-shadow: 0 2px 10px #00000010;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #b85c38;
+}
+
+.logo span {
+    color: #333;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b85c38;
+}
+
+/* Bagian beranda */
+.hero {
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(120deg, #f8e1c5, #fff4df);
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.label {
+    color: #b85c38;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-text > p:not(.label) {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #b85c38;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+}
+
+.btn:hover,
+.btn-pesan:hover {
+    background-color: #8f4027;
+}
+
+/* Bagian katalog */
+.menu {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.deskripsi {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+/* Kartu makanan */
+.produk {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000012;
+    transition: transform 0.3s;
+}
+
+.produk:hover {
+    transform: translateY(-5px);
+}
+
+.produk img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.produk-info {
+    padding: 20px;
+}
+
+.kategori {
+    display: inline-block;
+    color: #b85c38;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.produk h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.harga {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b85c38;
+    margin-bottom: 18px;
+}
+
+.btn-pesan {
+    display: block;
+    text-align: center;
+    background-color: #b85c38;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* Bagian kontak */
+.kontak {
+    text-align: center;
+    padding: 45px 20px;
+    background-color: #f8e8d6;
+    line-height: 2;
+}
+
+.kontak h2 {
+    margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* Tampilan tablet */
+@media (max-width: 900px) {
+    .menu-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header {
+        padding: 20px 5%;
+    }
+}
+
+/* Tampilan HP */
+@media (max-width: 550px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .menu {
+        padding: 45px 5%;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .produk img {
+        height: 240px;
+    }
+}
